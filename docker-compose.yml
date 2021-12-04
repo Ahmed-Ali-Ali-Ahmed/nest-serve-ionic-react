@@ -10,23 +10,6 @@ services:
             dockerfile: ./Dockerfile
         command: npm run start:debug
         ports:
-            - 6001:3000
-            - 9229:9229
-        networks:
-            - nesjs-network
-        volumes:
-            - .:/usr/src/app
-            - /usr/src/app/node_modules
-        restart: unless-stopped
-    prod:
-        container_name: nestjs_prod
-        image: nestjs-prod:1.0.0
-        build:
-            context: .
-            target: production
-            dockerfile: ./Dockerfile
-        command: npm run start:prod
-        ports:
             - 80:3000
             - 9229:9229
         networks:
