@@ -7,8 +7,9 @@
 1) copy the code to your local machine 
 2) go to the root directory of the app    (nest-serve-ionic-react/)
 3) open the command line on that directory 
-4) run docker-compose up prod
-5)  the app will be available on port 80
+4) run docker-compose build
+5) run docker-compose up prod
+6)  the app will be available on port 80
 
 
 
@@ -18,8 +19,9 @@
 1) copy the code to your local machine 
 2) go to the root directory of the app    (nest-serve-ionic-react/)
 3) open the command line on that directory 
-4) run docker-compose up dev
-5)  the app will be available on port 6001
+4) un docker-compose build
+5) run docker-compose up dev
+6) the app will be available on port 6001
 
 
 
