@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+    prod:
+        container_name: ahmedalinest
+        image: ahmed1996/ahmedali-nest
+        build:
+            context: .
+            target: production
+            dockerfile:  ./Dockerfile
+        command: npm run start:prod
+        ports:
+          - 3000:3000
+          - 9229:9229
+        networks:
+          - nestjs-network
+        volumes:
+          - .:/usr/src/app
+          - /usr/src/app/node_modules
+        restart: unless-stopped
+
+
+networks:
+    nestjs-network:
